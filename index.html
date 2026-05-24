@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diandi Digital — Développeur Apps Android, WordPress & Python | Abidjan</title>
+<meta name="description" content="Agence digitale basée à Abidjan — Développeur d'applications Flutter Android, plugins WordPress sur-mesure, logiciels desktop Python pour PME ivoiriennes.">
+<meta property="og:title" content="Diandi Digital — Portfolio Applications">
+<meta property="og:description" content="Applications Flutter Android, plugins WordPress, ERP Python — solutions digitales pour PME d'Afrique de l'Ouest.">
+<meta property="og:url" content="https://diandidigital.tech">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dd-bg:#08080f;--dd-surface:#0d0d18;--dd-red:#CC2A2A;--dd-blue:#1A4FD6;
+  --dd-dblue:#0D1F6E;--dd-gold:#D4821A;--dd-light:#F5F3EE;
+  --dd-muted:rgba(245,243,238,0.55);--dd-border:rgba(245,243,238,0.1);
+  --dd-border-hover:rgba(245,243,238,0.25);
+}
+html{scroll-behavior:smooth}
+body{background:var(--dd-bg);color:var(--dd-light);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden}
+h1,h2,h3,.brand{font-family:'Syne',sans-serif}
+a{color:inherit;text-decoration:none}
+nav{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2.5rem;border-bottom:0.5px solid var(--dd-border);position:sticky;top:0;background:rgba(8,8,15,0.93);backdrop-filter:blur(10px);z-index:100}
+.brand{font-size:1.15rem;font-weight:800;letter-spacing:-0.02em}
+.brand span{color:var(--dd-red)}
+nav ul{display:flex;gap:2.2rem;list-style:none}
+nav a{font-size:13px;font-weight:500;color:var(--dd-muted);transition:color .2s}
+nav a:hover{color:var(--dd-light)}
+.nav-cta{background:var(--dd-red) !important;color:#fff !important;padding:.45rem 1.2rem;border-radius:6px;font-weight:500 !important}
+.nav-cta:hover{opacity:.9}
+.hero{padding:5.5rem 2.5rem 4.5rem;max-width:920px;margin:0 auto;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(204,42,42,0.1);border:0.5px solid rgba(204,42,42,0.3);padding:.35rem 1rem;border-radius:20px;font-size:12px;color:var(--dd-red);font-weight:500;margin-bottom:2.2rem;letter-spacing:.05em}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--dd-red);display:block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:800;line-height:1.08;letter-spacing:-0.03em;margin-bottom:1.3rem}
+.hero h1 em{font-style:normal;color:var(--dd-red)}
+.hero p{font-size:1.05rem;color:var(--dd-muted);max-width:600px;margin:0 auto 2.8rem;line-height:1.75}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--dd-red);color:#fff;padding:.75rem 2rem;border-radius:8px;font-weight:500;font-family:'DM Sans',sans-serif;font-size:14px;transition:opacity .2s;display:inline-block}
+.btn-primary:hover{opacity:.85}
+.btn-outline{border:0.5px solid var(--dd-border-hover);color:var(--dd-light);padding:.75rem 2rem;border-radius:8px;font-size:14px;transition:border-color .2s;display:inline-block}
+.btn-outline:hover{border-color:rgba(245,243,238,0.5)}
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--dd-border);border-top:0.5px solid var(--dd-border);border-bottom:0.5px solid var(--dd-border)}
+.stat{background:var(--dd-bg);padding:2rem 1rem;text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--dd-light);display:block;line-height:1}
+.stat-label{font-size:12px;color:var(--dd-muted);letter-spacing:.04em;margin-top:.3rem;display:block}
+section{padding:5rem 2.5rem;max-width:1040px;margin:0 auto}
+.section-label{font-size:11px;font-weight:500;letter-spacing:.14em;color:var(--dd-red);text-transform:uppercase;margin-bottom:.6rem}
+.section-title{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.025em;margin-bottom:.6rem}
+.section-sub{color:var(--dd-muted);font-size:.95rem;margin-bottom:2.5rem;max-width:520px;line-height:1.7}
+.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2.2rem}
+.filter-btn{padding:.38rem 1rem;border-radius:20px;border:0.5px solid var(--dd-border);background:transparent;color:var(--dd-muted);font-size:12px;font-family:'DM Sans',sans-serif;cursor:pointer;transition:all .2s;letter-spacing:.02em}
+.filter-btn.active,.filter-btn:focus{background:var(--dd-red);border-color:var(--dd-red);color:#fff;outline:none}
+.filter-btn:hover:not(.active){border-color:var(--dd-border-hover);color:var(--dd-light)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1px;background:var(--dd-border)}
+.project-card{background:var(--dd-bg);padding:2rem;position:relative;overflow:hidden;transition:background .2s}
+.project-card:hover{background:var(--dd-surface)}
+.project-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--dd-red);opacity:0;transition:opacity .25s}
+.project-card:hover::before{opacity:1}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.1rem}
+.card-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:19px}
+.card-icon.flutter{background:rgba(26,79,214,0.14)}
+.card-icon.wp{background:rgba(204,42,42,0.1)}
+.card-icon.python{background:rgba(212,130,26,0.12)}
+.card-icon.web{background:rgba(13,31,110,0.25)}
+.card-badge{font-size:10px;font-weight:500;padding:.22rem .65rem;border-radius:20px;letter-spacing:.05em;white-space:nowrap}
+.badge-flutter{background:rgba(26,79,214,0.14);color:#6B9EFF;border:0.5px solid rgba(107,158,255,0.2)}
+.badge-wp{background:rgba(204,42,42,0.1);color:#F07070;border:0.5px solid rgba(240,112,112,0.2)}
+.badge-python{background:rgba(212,130,26,0.12);color:#E8A84A;border:0.5px solid rgba(232,168,74,0.2)}
+.badge-html{background:rgba(13,31,110,0.28);color:#7BA3FF;border:0.5px solid rgba(123,163,255,0.2)}
+.project-card h3{font-size:1rem;font-weight:700;margin-bottom:.5rem;letter-spacing:-.01em}
+.project-card p{font-size:13px;color:var(--dd-muted);line-height:1.65}
+.card-footer{margin-top:1.3rem;display:flex;align-items:center;justify-content:space-between}
+.card-lang{font-size:11px;color:var(--dd-muted);display:flex;align-items:center;gap:5px}
+.lang-dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+.dot-dart{background:#00B4AB}
+.dot-php{background:#777BB3}
+.dot-python{background:#3572A5}
+.dot-html{background:#E34C26}
+.card-link{font-size:12px;color:#6B9EFF;display:inline-flex;align-items:center;gap:4px;opacity:0;transition:opacity .2s}
+.project-card:hover .card-link{opacity:1}
+.services-section{background:rgba(255,255,255,0.018);border-top:0.5px solid var(--dd-border);border-bottom:0.5px solid var(--dd-border);padding:5rem 0}
+.services-inner{max-width:1040px;margin:0 auto;padding:0 2.5rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:1px;background:var(--dd-border);margin-top:2.5rem}
+.service-item{background:var(--dd-bg);padding:2rem 1.6rem;transition:background .2s}
+.service-item:hover{background:var(--dd-surface)}
+.service-num{font-family:'Syne',sans-serif;font-size:2.1rem;font-weight:800;color:rgba(204,42,42,0.22);margin-bottom:.9rem;display:block;line-height:1}
+.service-item h3{font-size:.9rem;font-weight:700;margin-bottom:.5rem}
+.service-item p{font-size:12px;color:var(--dd-muted);line-height:1.65}
+.tech-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}
+.tech-pill{padding:.4rem 1rem;border:0.5px solid var(--dd-border);border-radius:20px;font-size:12px;color:var(--dd-muted);transition:all .25s;cursor:default}
+.tech-pill:hover{border-color:rgba(204,42,42,0.5);color:var(--dd-light)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--dd-border);max-width:1040px;margin:0 auto}
+.contact-block{background:var(--dd-bg);padding:3rem 2.5rem}
+.contact-block h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:1.5rem}
+.contact-row{display:flex;align-items:center;gap:.85rem;margin-bottom:1.1rem;font-size:13px;color:var(--dd-muted)}
+.contact-row i{color:var(--dd-red);font-size:16px;flex-shrink:0}
+.contact-row a{color:var(--dd-muted);transition:color .2s}
+.contact-row a:hover{color:var(--dd-light)}
+.contact-cta-text{font-size:13px;color:var(--dd-muted);margin-bottom:1.8rem;line-height:1.7}
+footer{border-top:0.5px solid var(--dd-border);padding:1.5rem 2.5rem;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--dd-muted)}
+.footer-brand{font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:var(--dd-light)}
+.footer-brand span{color:var(--dd-red)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{color:var(--dd-muted);transition:color .2s}
+.footer-links a:hover{color:var(--dd-light)}
+@media(max-width:768px){nav ul{display:none}.stats-bar{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}.hero{padding:3.5rem 1.5rem 3rem}section{padding:3rem 1.5rem}.services-inner{padding:0 1.5rem}nav{padding:1rem 1.5rem}footer{flex-direction:column;gap:.7rem;text-align:center}.footer-links{justify-content:center}}
+@media(max-width:420px){.stats-bar{grid-template-columns:1fr 1fr}.hero h1{font-size:2rem}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="brand">Diandi<span>Digital</span></div>
+  <ul>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+<div class="hero">
+  <div class="hero-badge">Disponible pour de nouveaux projets</div>
+  <h1>Développeur d'<em>applications</em><br>mobiles & web, Abidjan</h1>
+  <p>Applications Flutter Android, plugins WordPress, logiciels desktop Python — des solutions digitales sur-mesure pour les PME et entrepreneurs d'Afrique de l'Ouest et au-delà.</p>
+  <div class="hero-btns">
+    <a href="#projets" class="btn-primary">Voir les projets</a>
+    <a href="https://github.com/diandidigital" class="btn-outline" target="_blank" rel="noopener">GitHub &rarr;</a>
+  </div>
+</div>
+<div class="stats-bar">
+  <div class="stat"><span class="stat-num">16+</span><span class="stat-label">Apps Android</span></div>
+  <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Plugins WP</span></div>
+  <div class="stat"><span class="stat-num">3</span><span class="stat-label">Stacks maîtrisés</span></div>
+  <div class="stat"><span class="stat-num">CI</span><span class="stat-label">Abidjan, Côte d'Ivoire</span></div>
+</div>
+<section id="projets">
+  <p class="section-label">Réalisations</p>
+  <h2 class="section-title">Projets sélectionnés</h2>
+  <p class="section-sub">Applications Android, plugins WordPress, logiciels de gestion desktop et web apps.</p>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCards('all',this)">Tous</button>
+    <button class="filter-btn" onclick="filterCards('flutter',this)">Flutter Android</button>
+    <button class="filter-btn" onclick="filterCards('wp',this)">WordPress</button>
+    <button class="filter-btn" onclick="filterCards('python',this)">Python / Desktop</button>
+    <button class="filter-btn" onclick="filterCards('web',this)">Web App</button>
+  </div>
+  <div class="projects-grid" id="projectsGrid">
+    <div class="project-card" data-cat="flutter"><div class="card-top"><div class="card-icon flutter"><i class="ti ti-calculator" style="color:#6B9EFF"></i></div><span class="card-badge badge-flutter">Flutter Android</span></div><h3>Diandi Calc</h3><p>Calculatrice Android privacy-first, sans pub, sans permissions inutiles.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-dart"></span>Dart / Flutter</span><a href="https://github.com/diandidigital/diandi_calc" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="flutter"><div class="card-top"><div class="card-icon flutter"><i class="ti ti-notes" style="color:#6B9EFF"></i></div><span class="card-badge badge-flutter">Flutter Android</span></div><h3>Diandi Notes</h3><p>Bloc-notes offline privacy-first pour Android. Stockage local SQLite, aucune donnée envoyée vers le cloud.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-dart"></span>Dart / Flutter</span><a href="https://github.com/diandidigital/diandi_notes" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="flutter"><div class="card-top"><div class="card-icon flutter"><i class="ti ti-qrcode" style="color:#6B9EFF"></i></div><span class="card-badge badge-flutter">Flutter Android</span></div><h3>Diandi QR</h3><p>Scanner et générateur de QR codes Android. Scan rapide, historique local, génération de QR personnalisés.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-dart"></span>Dart / Flutter</span><a href="https://github.com/diandidigital/diandi_qr" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="flutter"><div class="card-top"><div class="card-icon flutter"><i class="ti ti-wallet" style="color:#6B9EFF"></i></div><span class="card-badge badge-flutter">Flutter Android</span></div><h3>Diandi Budget</h3><p>Application de finances personnelles Android. Suivi des dépenses, catégories, bilan mensuel — 100% hors ligne.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-dart"></span>Dart / Flutter</span><a href="https://github.com/diandidigital/diandi_budget" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="flutter"><div class="card-top"><div class="card-icon flutter"><i class="ti ti-key" style="color:#6B9EFF"></i></div><span class="card-badge badge-flutter">Flutter Android</span></div><h3>Diandi PassGen</h3><p>Générateur de mots de passe sécurisés Android. Personnalisation complète, aucun accès réseau requis.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-dart"></span>Dart / Flutter</span><a href="https://github.com/diandidigital/diandi_passgen" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="flutter"><div class="card-top"><div class="card-icon flutter"><i class="ti ti-language" style="color:#6B9EFF"></i></div><span class="card-badge badge-flutter">Flutter Android</span></div><h3>KAOW — Langue Guéré</h3><p>Application de préservation de la langue Guéré (Côte d'Ivoire) : dictionnaire, proverbes, 44 localités, SQLite offline.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-dart"></span>Dart / Flutter</span><a href="https://github.com/diandidigital" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="python"><div class="card-top"><div class="card-icon python"><i class="ti ti-truck" style="color:#E8A84A"></i></div><span class="card-badge badge-python">Python / HTML</span></div><h3>GoFleet</h3><p>Logiciel de gestion de PME de transport, vente et location de véhicules. Modules parc, contrats, facturation.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-html"></span>HTML / Python</span><a href="https://github.com/diandidigital/GoFleet" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="python"><div class="card-top"><div class="card-icon python"><i class="ti ti-building-factory" style="color:#E8A84A"></i></div><span class="card-badge badge-python">PyQt6 / SQLite</span></div><h3>ERP Agro-industriel</h3><p>Logiciel desktop pour PME cacao, cajou, café en Côte d'Ivoire. Traçabilité lots, codification produits, 6 modules.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-python"></span>Python / PyQt6</span><a href="https://github.com/diandidigital" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="python"><div class="card-top"><div class="card-icon python"><i class="ti ti-receipt" style="color:#E8A84A"></i></div><span class="card-badge badge-python">Flask / SQLite</span></div><h3>Diandi Caisse</h3><p>Point de vente (POS) desktop pour PME ivoiriennes. Scan code-barres, caisse, inventaire, rapports.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-python"></span>Python / Flask</span><a href="https://github.com/diandidigital/diandi-caisse" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="wp"><div class="card-top"><div class="card-icon wp"><i class="ti ti-shield-lock" style="color:#F07070"></i></div><span class="card-badge badge-wp">WordPress</span></div><h3>Diandi Firewall</h3><p>Plugin WordPress de sécurité avancée : blocage par pays, AbuseIPDB, GeoLite2, protection anti-intrusion en temps réel.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-php"></span>PHP</span><a href="https://github.com/diandidigital" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="wp"><div class="card-top"><div class="card-icon wp"><i class="ti ti-chart-bar" style="color:#F07070"></i></div><span class="card-badge badge-wp">WordPress</span></div><h3>Diandi Stats</h3><p>Analytics maison WP sans dépendance externe : exclusion cookies/IP, rapports email hebdomadaires, export CSV.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-php"></span>PHP</span><a href="https://github.com/diandidigital" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="wp"><div class="card-top"><div class="card-icon wp"><i class="ti ti-shopping-bag" style="color:#F07070"></i></div><span class="card-badge badge-wp">WordPress</span></div><h3>Diandi Boutique</h3><p>E-commerce WP avec panier WhatsApp, 12 catégories, modal produit, intégration Wave CI pour paiement mobile local.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-php"></span>PHP / JS</span><a href="https://github.com/diandidigital" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="wp"><div class="card-top"><div class="card-icon wp"><i class="ti ti-search" style="color:#F07070"></i></div><span class="card-badge badge-wp">WordPress</span></div><h3>Post WP SEO</h3><p>Plugin SEO propulsé par l'API Anthropic (Claude). Génère automatiquement les meta descriptions et champs Yoast.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-php"></span>PHP / AI</span><a href="https://github.com/diandidigital" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="web"><div class="card-top"><div class="card-icon web"><i class="ti ti-users-group" style="color:#7BA3FF"></i></div><span class="card-badge badge-html">Firebase / WP</span></div><h3>Plateforme MUDETI</h3><p>Site WordPress + plugin membres pour mutuelle de développement communautaire. Cotisations, numérotation, REST API stats.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-php"></span>PHP / Firebase</span><a href="https://github.com/diandidigital" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+    <div class="project-card" data-cat="web"><div class="card-top"><div class="card-icon web"><i class="ti ti-qrcode" style="color:#7BA3FF"></i></div><span class="card-badge badge-html">PWA / Firebase</span></div><h3>Système commande QR</h3><p>SaaS commande par QR code pour restaurants à Abidjan. PWA temps réel Firestore, dashboard admin.</p><div class="card-footer"><span class="card-lang"><span class="lang-dot dot-html"></span>HTML / Firestore</span><a href="https://github.com/diandidigital" class="card-link" target="_blank" rel="noopener">GitHub <i class="ti ti-arrow-up-right" style="font-size:12px"></i></a></div></div>
+  </div>
+</section>
+<div class="services-section" id="services">
+  <div class="services-inner">
+    <p class="section-label">Ce que je fais</p>
+    <h2 class="section-title">Services</h2>
+    <div class="services-grid">
+      <div class="service-item"><span class="service-num">01</span><h3>Apps Android Flutter</h3><p>Applications mobiles Dart/Flutter, SQLite offline, publication Google Play Store.</p></div>
+      <div class="service-item"><span class="service-num">02</span><h3>Plugins WordPress</h3><p>Plugins PHP sur-mesure : sécurité, e-commerce, analytics, SEO, gestion membres.</p></div>
+      <div class="service-item"><span class="service-num">03</span><h3>Logiciels Desktop</h3><p>Applications Python PyQt6/Flask empaquetées pour Windows avec PyInstaller.</p></div>
+      <div class="service-item"><span class="service-num">04</span><h3>Web App / PWA</h3><p>Applications web progressives, Firebase Firestore temps réel, dashboards admin React/Vue.</p></div>
+      <div class="service-item"><span class="service-num">05</span><h3>Design & Identité</h3><p>Identité visuelle, infographie, sérigraphie, impression grand format, print.</p></div>
+      <div class="service-item"><span class="service-num">06</span><h3>Formation IT</h3><p>Formation développement web, mobile, outils digitaux pour équipes et entrepreneurs.</p></div>
+    </div>
+  </div>
+</div>
+<section id="stack">
+  <p class="section-label">Technologies</p>
+  <h2 class="section-title">Stack technique</h2>
+  <p class="section-sub">Les langages, frameworks et outils utilisés sur l'ensemble de mes projets.</p>
+  <div class="tech-list">
+    <span class="tech-pill">Flutter / Dart</span><span class="tech-pill">Python</span><span class="tech-pill">PyQt6 / PySide6</span><span class="tech-pill">Flask</span><span class="tech-pill">PHP</span><span class="tech-pill">WordPress</span><span class="tech-pill">SQLite</span><span class="tech-pill">PostgreSQL</span><span class="tech-pill">Firebase / Firestore</span><span class="tech-pill">HTML / CSS / JS</span><span class="tech-pill">React</span><span class="tech-pill">Next.js</span><span class="tech-pill">D3.js</span><span class="tech-pill">PyInstaller</span><span class="tech-pill">Google Play Store</span><span class="tech-pill">REST API</span><span class="tech-pill">Wave CI</span><span class="tech-pill">Git / GitHub</span><span class="tech-pill">API Anthropic (Claude)</span>
+  </div>
+</section>
+<section id="contact" style="padding-bottom:0">
+  <p class="section-label">Travailler ensemble</p>
+  <h2 class="section-title">Contact</h2>
+  <p class="section-sub">Disponible pour des projets sur Abidjan et à distance. Réponse sous 24h.</p>
+</section>
+<div class="contact-grid">
+  <div class="contact-block">
+    <h3>Coordonnées</h3>
+    <div class="contact-row"><i class="ti ti-map-pin"></i> Abidjan, Côte d'Ivoire</div>
+    <div class="contact-row"><i class="ti ti-world"></i> <a href="https://diandidigital.tech" target="_blank" rel="noopener">diandidigital.tech</a></div>
+    <div class="contact-row"><i class="ti ti-brand-github"></i> <a href="https://github.com/diandidigital" target="_blank" rel="noopener">github.com/diandidigital</a></div>
+    <div class="contact-row"><i class="ti ti-brand-facebook"></i> <a href="https://facebook.com/diandidigital" target="_blank" rel="noopener">facebook.com/diandidigital</a></div>
+    <div class="contact-row"><i class="ti ti-brand-instagram"></i> <a href="https://instagram.com/diandi.digital" target="_blank" rel="noopener">@diandi.digital</a></div>
+    <div class="contact-row"><i class="ti ti-brand-youtube"></i> <a href="https://www.youtube.com/@diandi_digital" target="_blank" rel="noopener">@diandi_digital</a></div>
+  </div>
+  <div class="contact-block">
+    <h3>Démarrer un projet</h3>
+    <p class="contact-cta-text">Application Android, plugin WordPress, logiciel de gestion ou web app — décrivez votre besoin et je vous réponds sous 24h.</p>
+    <a href="https://diandidigital.tech" class="btn-primary" target="_blank" rel="noopener">Visiter diandidigital.tech &rarr;</a>
+  </div>
+</div>
+<footer>
+  <span class="footer-brand">Diandi<span>Digital</span></span>
+  <div class="footer-links">
+    <a href="https://github.com/diandidigital" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://diandidigital.tech" target="_blank" rel="noopener">Site web</a>
+    <a href="https://facebook.com/diandidigital" target="_blank" rel="noopener">Facebook</a>
+  </div>
+  <span>Abidjan, Côte d'Ivoire — 2025</span>
+</footer>
+<script>
+function filterCards(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  var grid = document.getElementById('projectsGrid');
+  var cards = grid.querySelectorAll('.project-card');
+  cards.forEach(function(c) {
+    if (cat === 'all' || c.dataset.cat === cat) {
+      c.style.display = 'block';
+    } else {
+      c.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
